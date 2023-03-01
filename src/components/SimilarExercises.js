@@ -1,10 +1,11 @@
 import React from 'react'
+import { Box, Stack, Typography } from '@mui/material';
 
-const SimilarExercises = () => {
+const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
   return (
-    <div>
+    <Box sx={{ mt: { lg: '100px', xs: '0' }}}>
       
-    </div>
+    </Box>
   )
 }
 

@@ -15,6 +15,7 @@ const Navbar = () => {
       gap='40px'
       fontSize='24px'
       alignItems='flex-end'
+    
       >
         
 
