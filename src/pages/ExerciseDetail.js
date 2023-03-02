@@ -17,6 +17,7 @@ const ExerciseDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
+
     const fetchExercisesData = async () => {
       const exerciseDbUrl = 'https://exercisedb.p.rapidapi.com';
       const youtubeSearchUrl = 'https://youtube-search-and-download.p.rapidapi.com';
@@ -33,7 +34,7 @@ const ExerciseDetail = () => {
       const equipmentExercisesData = await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`, exerciseOptions);
       setEquipmentExercises(equipmentExercisesData);
 
-    }
+    };
 
     fetchExercisesData();
   }, [id]);
@@ -42,10 +43,10 @@ const ExerciseDetail = () => {
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
       <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name}/>
-      <SimilarExercises TargetMuscleExercises={targetMuscleExercises} 
+      <SimilarExercises targetMuscleExercises={targetMuscleExercises} 
       equipmentExercises={equipmentExercises} />
     </Box>
   )
 }
 
-export default ExerciseDetail
+export default ExerciseDetail;
